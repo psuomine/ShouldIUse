@@ -1,12 +1,6 @@
 import React from 'react'
-import PageTitle from 'components/PageTitle'
+import Content from 'components/Content'
 
-const App = () => {
-  return (
-    <>
-      <PageTitle title="Should i use the NPM library?" />
-    </>
-  )
-}
+const App = () => <Content />
 
 export default App
