@@ -1,11 +1,10 @@
 import React from 'react'
-
-const TITLE = 'Should i use the NPM library?'
+import PageTitle from 'components/PageTitle'
 
 const App = () => {
   return (
     <>
-      <h1>{TITLE}</h1>
+      <PageTitle title="Should i use the NPM library?" />
     </>
   )
 }
