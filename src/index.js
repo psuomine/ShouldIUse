@@ -9,6 +9,8 @@ import { ApolloLink } from 'apollo-link'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import GlobalStyle from './theme/GlobalStyle'
+import Theme from './theme/Theme'
+import { ThemeProvider } from 'styled-components'
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql'
 
@@ -40,7 +42,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider theme={Theme}>
+      <App />
+    </ThemeProvider>
     <GlobalStyle />
   </ApolloProvider>,
   document.getElementById('root')

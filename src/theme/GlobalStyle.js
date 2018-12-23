@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+
 	*::before,
 	*::after,
 	*{
@@ -10,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 	html,
 	body {
 		height: 100%;
+		background-color: #F8F7F9;
 	}
 
 	body {
