@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react'
 
-const TITLE = "Should i use the NPM library?";
+const TITLE = 'Should i use the NPM library?'
 
 const App = () => {
   return (
     <>
       <h1>{TITLE}</h1>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
