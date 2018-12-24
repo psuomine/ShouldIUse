@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
 
 const headingStyles = css`
-  color: ${props => props.theme.text};
+  color: ${props => props.theme.typography.text};
   font-weight: 400;
+  margin: 0;
+  font-family: 'Montserrat';
 `
 
 export const H1 = styled.h1`
