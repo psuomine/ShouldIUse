@@ -5,7 +5,7 @@ import { H1 } from 'components/styles/Heading'
 
 describe('PageTitle', () => {
   it('renders H1 component', () => {
-    const wrapper = shallow(<PageTitle />)
+    const wrapper = shallow(<PageTitle title="" />)
     expect(wrapper.find(H1)).toBeTruthy()
   })
 
