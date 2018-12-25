@@ -13,9 +13,4 @@ describe('SearchCard', () => {
     const wrapper = shallow(<SearchCard />)
     expect(wrapper.find(H3).text()).toEqual('Search the npm package')
   })
-
-  it('renders button', () => {
-    const wrapper = shallow(<SearchCard />)
-    expect(wrapper.exists('.search-btn')).toBeTruthy()
-  })
 })
