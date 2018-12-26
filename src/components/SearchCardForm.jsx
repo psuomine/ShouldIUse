@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form } from 'formik'
 import SearchCardField from 'components/SearchCardField'
 import CardActionButton from 'components/CardActionButton'
 
@@ -12,7 +13,8 @@ const Fields = styled.div`
 
 class SearchCardForm extends Component {
   handleSubmit = (values, actions) => {
-    // Handle submit
+    const { handleSearch } = this.props
+    handleSearch(values.name, values.owner)
   }
 
   render() {
@@ -30,6 +32,10 @@ class SearchCardForm extends Component {
       </Formik>
     )
   }
+}
+
+SearchCardForm.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
 }
 
 export default SearchCardForm

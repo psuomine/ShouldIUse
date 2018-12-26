@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import gql from 'graphql-tag'
+import { Query } from 'react-apollo'
 import styled from 'styled-components'
 import { H3 } from 'components/styles/Heading'
 import SearchCardForm from 'components/SearchCardForm'
+import { getRepository } from 'graphql/queries'
 
 const Card = styled.div`
   display: flex;
@@ -17,13 +20,18 @@ const CardContent = styled.div`
 `
 
 class SearchCard extends Component {
+  handleSearch = (name, owner) => {
+    console.log('name', name)
+    console.log('owner', owner)
+  }
+
   render() {
     return (
       <Card>
         <CardContent>
           <H3>Search the npm package</H3>
         </CardContent>
-        <SearchCardForm />
+        <SearchCardForm handleSearch={this.handleSearch} />
       </Card>
     )
   }
