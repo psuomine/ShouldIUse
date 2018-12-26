@@ -9,20 +9,16 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
-	html,
-	body {
-		height: 100%;
+	html{
+		min-height: 100vh;
 		background-color: #F8F7F9;
 	}
 
 	body {
 		margin: 0;
 		padding: 0;
-		font-family: "Montserrat"
-	}
-
-	#root {
-		min-height: 100vh;
+		font-family: "Montserrat";
+		background-color: #F8F7F9;
 	}
 `
 
