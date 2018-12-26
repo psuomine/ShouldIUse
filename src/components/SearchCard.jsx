@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import gql from 'graphql-tag'
-import { Query } from 'react-apollo'
+import { ApolloConsumer } from 'react-apollo'
 import styled from 'styled-components'
 import { H3 } from 'components/styles/Heading'
 import SearchCardForm from 'components/SearchCardForm'
@@ -20,19 +20,35 @@ const CardContent = styled.div`
 `
 
 class SearchCard extends Component {
-  handleSearch = (name, owner) => {
-    console.log('name', name)
-    console.log('owner', owner)
+  state = {
+    repository: null,
+    isLoading: false,
   }
+
+  handleSearchSuccess = ({ repository }) => this.setState({ repository, isLoading: false })
+
+  handleStartSearch = () => this.setState({ repository: null, isLoading: true })
 
   render() {
     return (
-      <Card>
-        <CardContent>
-          <H3>Search the npm package</H3>
-        </CardContent>
-        <SearchCardForm handleSearch={this.handleSearch} />
-      </Card>
+      <ApolloConsumer>
+        {client => (
+          <Card>
+            <CardContent>
+              <H3>Search the npm package</H3>
+            </CardContent>
+            <SearchCardForm
+              handleSearch={async (name, owner) => {
+                const { data } = await client.query({
+                  query: gql(getRepository),
+                  variables: { name, owner },
+                })
+                this.handleSearchSuccess(data)
+              }}
+            />
+          </Card>
+        )}
+      </ApolloConsumer>
     )
   }
 }
