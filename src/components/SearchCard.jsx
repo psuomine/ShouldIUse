@@ -9,11 +9,10 @@ const Card = styled.div`
   background-color: white;
   margin-top: 48px;
   border-radius: 20px;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16), 0 5px 4px 0px rgba(0, 0, 0, 0.1);
 `
 
 const CardContent = styled.div`
-  text-align: left;
   padding: 48px 48px 0 48px;
 `
 

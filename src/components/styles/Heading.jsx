@@ -19,5 +19,6 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   font-size: 24px;
+  letter-spacing: 1px;
   ${headingStyles}
 `

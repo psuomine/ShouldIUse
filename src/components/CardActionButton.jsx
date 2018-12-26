@@ -12,6 +12,11 @@ const ActionButton = styled.button`
   border: none;
   background-color: ${props => props.theme.primary};
   width: 100%;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 `
 
 const CardActionButton = ({ type, title, isDisabled }) => (
