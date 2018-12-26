@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 import { Formik, Form, Field } from 'formik'
+import SearchCardField from 'components/SearchCardField'
 import CardActionButton from 'components/CardActionButton'
+
+const Fields = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 32px 48px 0 48px;
+`
 
 class SearchCardForm extends Component {
   handleSubmit = (values, actions) => {
-    console.log('values', values)
-    console.log('actions', actions)
+    // Handle submit
   }
 
   render() {
@@ -13,8 +20,10 @@ class SearchCardForm extends Component {
       <Formik initialValues={{ name: '', owner: '' }} onSubmit={this.handleSubmit}>
         {props => (
           <Form>
-            <Field type="text" name="name" placeholder="Package name" />
-            <Field type="text" name="owner" placeholder="Package owner" />
+            <Fields>
+              <SearchCardField type="text" name="name" placeholder="Package name" />
+              <SearchCardField type="text" name="owner" placeholder="Package owner" />
+            </Fields>
             <CardActionButton title="SEARCH PACKAGE" />
           </Form>
         )}
