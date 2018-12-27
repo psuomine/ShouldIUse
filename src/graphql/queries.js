@@ -1,7 +1,11 @@
 export const getRepository = `
 	query Repository($name: String!, $owner: String!) {
 		repository(name: $name, owner: $owner) {
-			createdAt
+			createdAt,
+			isArchived,
+			hasIssuesEnabled,
+			description,
+			openIssues: issues(states: [OPEN]) {totalCount}
 		}
 	}
 `
