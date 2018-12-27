@@ -5,7 +5,13 @@ export const getRepository = `
 			isArchived,
 			hasIssuesEnabled,
 			description,
-			openIssues: issues(states: [OPEN]) {totalCount}
+			openIssues: issues(states: [OPEN]) {totalCount},
+			homepageUrl,
+			name,
+			nameWithOwner,
+			watchers {totalCount},
+			stargazers {totalCount},
+			forkCount
 		}
 	}
 `
