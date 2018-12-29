@@ -5,12 +5,12 @@ import { H3 } from 'components/styles/Heading'
 
 describe('SearchCard', () => {
   it('renders heading', () => {
-    const wrapper = shallow(<SearchCard />)
+    const wrapper = shallow(<SearchCard handleSearch={() => {}} />)
     expect(wrapper.find(H3)).toHaveLength(1)
   })
 
   it('renders title', () => {
-    const wrapper = shallow(<SearchCard />)
+    const wrapper = shallow(<SearchCard handleSearch={() => {}} />)
     expect(wrapper.find(H3).text()).toEqual('Search the npm package')
   })
 })

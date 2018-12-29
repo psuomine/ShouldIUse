@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
+import gql from 'graphql-tag'
+import { ApolloConsumer } from 'react-apollo'
 import PageTitle from 'components/PageTitle'
 import SearchCard from 'components/SearchCard'
+import { getRepository } from 'graphql/queries'
 
 const Container = styled.div`
   display: flex;
@@ -15,13 +18,38 @@ const SearchCardLayout = styled.div`
   width: 100%;
 `
 
-const Content = () => (
-  <Container>
-    <PageTitle title="Should i use the NPM library?" />
-    <SearchCardLayout>
-      <SearchCard />
-    </SearchCardLayout>
-  </Container>
-)
+class Content extends Component {
+  state = {
+    repository: null,
+    isLoading: false,
+  }
+
+  handleSearchSuccess = ({ repository }) => this.setState({ repository, isLoading: false })
+
+  handleStartSearch = () => this.setState({ repository: null, isLoading: true })
+
+  render() {
+    return (
+      <Container>
+        <PageTitle title="Should i use the NPM library?" />
+        <ApolloConsumer>
+          {client => (
+            <SearchCardLayout>
+              <SearchCard
+                handleSearch={async (name, owner) => {
+                  const { data } = await client.query({
+                    query: gql(getRepository),
+                    variables: { name, owner },
+                  })
+                  this.handleSearchSuccess(data)
+                }}
+              />
+            </SearchCardLayout>
+          )}
+        </ApolloConsumer>
+      </Container>
+    )
+  }
+}
 
 export default Content

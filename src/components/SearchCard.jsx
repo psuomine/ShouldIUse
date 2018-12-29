@@ -1,10 +1,8 @@
-import React, { Component } from 'react'
-import gql from 'graphql-tag'
-import { ApolloConsumer } from 'react-apollo'
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { H3 } from 'components/styles/Heading'
 import SearchCardForm from 'components/SearchCardForm'
-import { getRepository } from 'graphql/queries'
 
 const Card = styled.div`
   display: flex;
@@ -19,38 +17,17 @@ const CardContent = styled.div`
   padding: 48px 48px 0 48px;
 `
 
-class SearchCard extends Component {
-  state = {
-    repository: null,
-    isLoading: false,
-  }
+const SearchCard = ({ handleSearch }) => (
+  <Card>
+    <CardContent>
+      <H3>Search the npm package</H3>
+    </CardContent>
+    <SearchCardForm handleSearch={handleSearch} />
+  </Card>
+)
 
-  handleSearchSuccess = ({ repository }) => this.setState({ repository, isLoading: false })
-
-  handleStartSearch = () => this.setState({ repository: null, isLoading: true })
-
-  render() {
-    return (
-      <ApolloConsumer>
-        {client => (
-          <Card>
-            <CardContent>
-              <H3>Search the npm package</H3>
-            </CardContent>
-            <SearchCardForm
-              handleSearch={async (name, owner) => {
-                const { data } = await client.query({
-                  query: gql(getRepository),
-                  variables: { name, owner },
-                })
-                this.handleSearchSuccess(data)
-              }}
-            />
-          </Card>
-        )}
-      </ApolloConsumer>
-    )
-  }
+SearchCard.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
 }
 
 export default SearchCard
