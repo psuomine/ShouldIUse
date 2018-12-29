@@ -12,7 +12,7 @@ const Fields = styled.div`
 `
 
 class SearchCardForm extends Component {
-  handleSubmit = (values, actions) => {
+  handleSubmit = values => {
     const { handleSearch } = this.props
     handleSearch(values.name, values.owner)
   }
@@ -20,7 +20,7 @@ class SearchCardForm extends Component {
   render() {
     return (
       <Formik initialValues={{ name: '', owner: '' }} onSubmit={this.handleSubmit}>
-        {props => (
+        {() => (
           <Form>
             <Fields>
               <SearchCardField type="text" name="name" placeholder="Package name" />
