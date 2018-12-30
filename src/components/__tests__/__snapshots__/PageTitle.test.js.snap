@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageTitle /> renders h1 element 1`] = `
+<h1
+  class="sc-bdVaJa eAkhWA"
+>
+  Headline
+</h1>
+`;

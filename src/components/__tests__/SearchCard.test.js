@@ -1,16 +1,26 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, cleanup } from 'react-testing-library'
+import { ThemeProvider } from 'styled-components'
+import Theme from 'theme/theme'
 import SearchCard from '../SearchCard'
-import { H3 } from 'components/styles/Heading'
 
-describe('SearchCard', () => {
+afterEach(cleanup)
+
+const renderComponent = () =>
+  render(
+    <ThemeProvider theme={Theme}>
+      <SearchCard handleSearch={() => {}} />
+    </ThemeProvider>
+  )
+
+describe('<SearchCard />', () => {
   it('renders heading', () => {
-    const wrapper = shallow(<SearchCard handleSearch={() => {}} />)
-    expect(wrapper.find(H3)).toHaveLength(1)
+    const { getByTestId } = renderComponent()
+    expect(getByTestId('title')).toBeTruthy()
   })
 
   it('renders title', () => {
-    const wrapper = shallow(<SearchCard handleSearch={() => {}} />)
-    expect(wrapper.find(H3).text()).toEqual('Search the npm package')
+    const { getByText } = renderComponent()
+    expect(getByText('Search the npm package')).toBeDefined()
   })
 })

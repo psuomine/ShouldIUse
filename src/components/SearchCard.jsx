@@ -20,7 +20,7 @@ const CardContent = styled.div`
 const SearchCard = ({ handleSearch }) => (
   <Card>
     <CardContent>
-      <H3>Search the npm package</H3>
+      <H3 data-testid="title">Search the npm package</H3>
     </CardContent>
     <SearchCardForm handleSearch={handleSearch} />
   </Card>
