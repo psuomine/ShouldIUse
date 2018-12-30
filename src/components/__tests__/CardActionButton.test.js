@@ -1,30 +1,37 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { render, cleanup } from 'react-testing-library'
+import { ThemeProvider } from 'styled-components'
+import Theme from 'theme/theme'
 import CardActionButton from '../CardActionButton'
 
-describe('CardActionButton', () => {
-  it('renders button element', () => {
-    const wrapper = shallow(<CardActionButton title="Submit" />)
-    expect(wrapper.find('.action-button')).toHaveLength(1)
-  })
+afterEach(cleanup)
 
-  it('renders title', () => {
-    const wrapper = shallow(<CardActionButton title="Submit" />)
-    expect(wrapper.find('.action-button').text()).toEqual('Submit')
+const renderComponent = (title, type, isDisabled) =>
+  render(
+    <ThemeProvider theme={Theme}>
+      <CardActionButton title={title} type={type} isDisabled={isDisabled} />
+    </ThemeProvider>
+  )
+
+describe('<CardACtionButton />', () => {
+  it('renders title based on title prop', () => {
+    const title = 'Submit'
+    const { getByTestId } = renderComponent(title)
+    expect(getByTestId('action-button').textContent).toBe(title)
   })
 
   it('button default type is submit', () => {
-    const wrapper = shallow(<CardActionButton title="Submit" />)
-    expect(wrapper.find('.action-button').prop('type')).toEqual('submit')
+    const { getByTestId } = renderComponent('Title')
+    expect(getByTestId('action-button').type).toBe('submit')
   })
 
   it('change button type to button', () => {
-    const wrapper = shallow(<CardActionButton title="Submit" type="button" />)
-    expect(wrapper.find('.action-button').prop('type')).toEqual('button')
+    const { getByTestId } = renderComponent('Title', 'button')
+    expect(getByTestId('action-button').type).toEqual('button')
   })
 
   it('disable button', () => {
-    const wrapper = shallow(<CardActionButton title="Submit" isDisabled={true} />)
-    expect(wrapper.find('.action-button').prop('disabled')).toBeTruthy()
+    const { getByTestId } = renderComponent('Title', 'button', true)
+    expect(getByTestId('action-button').disabled).toBe(true)
   })
 })

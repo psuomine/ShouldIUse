@@ -20,7 +20,7 @@ const ActionButton = styled.button`
 `
 
 const CardActionButton = ({ type, title, isDisabled }) => (
-  <ActionButton type={type} disabled={isDisabled} className="action-button">
+  <ActionButton data-testid="action-button" type={type} disabled={isDisabled}>
     <BodyText color="white" fontWeight={500}>
       {title}
     </BodyText>
