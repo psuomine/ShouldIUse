@@ -1,26 +1,17 @@
 import React from 'react'
-import { render, cleanup } from 'react-testing-library'
-import { ThemeProvider } from 'styled-components'
-import Theme from 'theme/theme'
+import { render } from 'testUtils'
 import SearchCard from '../SearchCard'
 
-afterEach(cleanup)
-
-const renderComponent = () =>
-  render(
-    <ThemeProvider theme={Theme}>
-      <SearchCard handleSearch={() => {}} />
-    </ThemeProvider>
-  )
+const handleSearch = jest.fn()
 
 describe('<SearchCard />', () => {
   it('renders heading', () => {
-    const { getByTestId } = renderComponent()
+    const { getByTestId } = render(<SearchCard handleSearch={handleSearch} />)
     expect(getByTestId('title')).toBeTruthy()
   })
 
   it('renders title', () => {
-    const { getByText } = renderComponent()
+    const { getByText } = render(<SearchCard handleSearch={handleSearch} />)
     expect(getByText('Search the npm package')).toBeDefined()
   })
 })

@@ -21,7 +21,7 @@ class SearchCardForm extends Component {
     return (
       <Formik initialValues={{ name: '', owner: '' }} onSubmit={this.handleSubmit}>
         {() => (
-          <Form>
+          <Form data-testid="form">
             <Fields>
               <SearchCardField type="text" name="name" placeholder="Package name" />
               <SearchCardField type="text" name="owner" placeholder="Package owner" />

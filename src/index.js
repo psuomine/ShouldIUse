@@ -7,7 +7,6 @@ import { ApolloProvider } from 'react-apollo'
 import { onError } from 'apollo-link-error'
 import { ApolloLink } from 'apollo-link'
 import App from './App'
-import * as serviceWorker from './serviceWorker'
 import GlobalStyle from './theme/GlobalStyle'
 import Theme from './theme/Theme'
 import { ThemeProvider } from 'styled-components'
@@ -49,5 +48,3 @@ ReactDOM.render(
   </ApolloProvider>,
   document.getElementById('root')
 )
-
-serviceWorker.unregister()
