@@ -13,15 +13,20 @@ const ActionButton = styled.button`
   background-color: ${props => props.theme.primary};
   width: 100%;
   cursor: pointer;
+  transition: background-color ease-in-out 0.3s;
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    background-color: ${props => props.theme.disabled};
   }
 `
 
 const CardActionButton = ({ type, title, isDisabled }) => (
   <ActionButton data-testid="action-button" type={type} disabled={isDisabled}>
-    <BodyText color="white" fontWeight={500}>
+    <BodyText color={isDisabled ? 'muted' : 'white'} fontWeight={500}>
       {title}
     </BodyText>
   </ActionButton>
