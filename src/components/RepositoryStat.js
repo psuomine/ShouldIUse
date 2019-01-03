@@ -9,7 +9,7 @@ const Container = styled.div`
   align-items: center;
 `
 
-const RepositoryStat = ({ title, value, unit }) => {
+const RepositoryStat = ({ title, value }) => {
   return (
     <Container>
       <H3 data-testid="stat-title">{title}</H3>
