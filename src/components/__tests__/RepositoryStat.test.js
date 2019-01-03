@@ -8,4 +8,9 @@ describe('<SearchCard />', () => {
     expect(getByTestId('stat-title').textContent).toBe('lodash')
     expect(getByTestId('stat-value').textContent).toBe('8')
   })
+
+  it('snapshot', () => {
+    const { container } = render(<RepositoryStat title="lodash" value="8" />)
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })
