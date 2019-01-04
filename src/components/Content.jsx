@@ -12,6 +12,7 @@ const Container = styled.div`
   flex-direction: column;
   margin-top: 96px;
   align-items: center;
+  max-width: 1400px;
 `
 
 const SearchCardLayout = styled.div`

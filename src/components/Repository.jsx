@@ -5,6 +5,12 @@ import { H2 } from 'components/styles/Heading'
 import { BodyText } from 'components/styles/Typography'
 import RepositoryStat from 'components/RepositoryStat'
 
+const RepositoryContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+`
+
 const RepositoryStats = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +21,7 @@ const RepositoryStats = styled.div`
 const Repository = ({
   repository: { homepageUrl, name, description, isArchived, forkCount, openIssues, stargazers, watchers },
 }) => (
-  <>
+  <RepositoryContainer>
     <H2>
       <a href={homepageUrl}>{name}</a>
     </H2>
@@ -30,7 +36,7 @@ const Repository = ({
         <RepositoryStat title="Watchers" value={watchers.totalCount} unit={'pcs'} />
       </RepositoryStats>
     )}
-  </>
+  </RepositoryContainer>
 )
 
 const totalCountPropType = PropTypes.shape({
