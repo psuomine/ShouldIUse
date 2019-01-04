@@ -20,6 +20,11 @@ const GlobalStyle = createGlobalStyle`
 		font-family: "Montserrat";
 		background-color: #F8F7F9;
 	}
+
+	#root {
+		display: flex;
+    justify-content: center;
+	}
 `
 
 export default GlobalStyle
