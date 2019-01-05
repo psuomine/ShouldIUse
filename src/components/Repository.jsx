@@ -14,8 +14,11 @@ const RepositoryContainer = styled.div`
 const RepositoryStats = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   margin-top: 32px;
+`
+
+const Link = styled.a`
+  color: #141033;
 `
 
 const Repository = ({
@@ -23,7 +26,9 @@ const Repository = ({
 }) => (
   <RepositoryContainer>
     <H2>
-      <a href={homepageUrl}>{name}</a>
+      <Link href={homepageUrl} target="_blank">
+        {name}
+      </Link>
     </H2>
     <BodyText>{description}</BodyText>
     {isArchived ? (

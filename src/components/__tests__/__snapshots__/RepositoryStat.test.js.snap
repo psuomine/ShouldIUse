@@ -2,16 +2,18 @@
 
 exports[`<SearchCard /> snapshot 1`] = `
 <div
-  class="sc-bxivhb MRFYD"
+  class="sc-bxivhb fMKgrM"
 >
   <h3
-    class="sc-htpNat ctLKUJ"
+    class="sc-htpNat sc-ifAKCX bBRVin"
+    color="muted"
     data-testid="stat-title"
   >
     lodash
   </h3>
   <h2
-    class="sc-bwzfXH fcawr"
+    class="sc-bwzfXH evpEzE"
+    color="primary"
     data-testid="stat-value"
   >
     8

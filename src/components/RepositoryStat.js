@@ -5,15 +5,24 @@ import { H3, H2 } from 'components/styles/Heading'
 
 const Container = styled.div`
   display: flex;
-  width: 300px;
+  width: 320px;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 24px;
+`
+
+const Title = styled(H3)`
+  margin-bottom: 8px;
 `
 
 const RepositoryStat = ({ title, value }) => (
   <Container>
-    <H3 data-testid="stat-title">{title}</H3>
-    <H2 data-testid="stat-value">{value}</H2>
+    <Title data-testid="stat-title" color="muted">
+      {title}
+    </Title>
+    <H2 data-testid="stat-value" color="primary">
+      {value}
+    </H2>
   </Container>
 )
 
