@@ -19,7 +19,7 @@ export const SmallerBodyText = styled.p`
 
 const typographyPropTypes = {
   fontWeight: PropTypes.oneOf([400, 500]),
-  color: PropTypes.oneOf(['text', 'textSecondary', 'white', 'muted']),
+  color: PropTypes.oneOf(['text', 'textSecondary', 'white', 'muted', 'primary']),
 }
 
 const typographyDefaultProps = {

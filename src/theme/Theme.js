@@ -7,6 +7,7 @@ const Theme = {
     textSecondary: '#9171D6',
     white: '#fff',
     muted: 'rgba(0,0,0,.54)',
+    primary: '#651EFF',
   },
 }
 
