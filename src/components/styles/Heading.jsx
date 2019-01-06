@@ -25,7 +25,7 @@ export const H3 = styled.h3`
 `
 
 const headingPropTypes = {
-  color: PropTypes.oneOf(['text', 'textSecondary', 'white', 'muted', 'primary']),
+  color: PropTypes.oneOf(['text', 'textSecondary', 'white', 'muted', 'primary', 'error']),
 }
 
 const defaultPropTypes = {
