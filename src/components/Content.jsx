@@ -6,13 +6,14 @@ import PageTitle from 'components/PageTitle'
 import SearchCard from 'components/SearchCard'
 import Repository from 'components/Repository'
 import { getRepository } from 'graphql/queries'
+import ErrorMessage from 'components/ErrorMessage'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 96px;
   align-items: center;
-  max-width: 960px;
+  max-width: 1400px;
 `
 
 const SearchCardLayout = styled.div`
@@ -24,14 +25,15 @@ class Content extends Component {
   state = {
     repository: null,
     isLoading: false,
+    errors: null,
   }
 
   handleSearchSuccess = ({ repository }) => this.setState({ repository, isLoading: false })
 
-  handleStartSearch = () => this.setState({ repository: null, isLoading: true })
+  handleStartSearch = () => this.setState({ repository: null, isLoading: true, errors: '' })
 
   render() {
-    const { repository } = this.state
+    const { repository, errors } = this.state
     return (
       <Container>
         <PageTitle title="Should i use the NPM library?" />
@@ -40,18 +42,23 @@ class Content extends Component {
             <SearchCardLayout>
               <SearchCard
                 handleSearch={async (name, owner) => {
-                  this.handleStartSearch()
-                  const { data } = await client.query({
-                    query: gql(getRepository),
-                    variables: { name, owner },
-                  })
-                  this.handleSearchSuccess(data)
+                  try {
+                    this.handleStartSearch()
+                    const { data } = await client.query({
+                      query: gql(getRepository),
+                      variables: { name, owner },
+                    })
+                    this.handleSearchSuccess(data)
+                  } catch (errors) {
+                    this.setState({ errors })
+                  }
                 }}
               />
             </SearchCardLayout>
           )}
         </ApolloConsumer>
         {repository && <Repository repository={repository} />}
+        {errors && errors.graphQLErrors && errors.graphQLErrors.map(err => <ErrorMessage message={err.message} />)}
       </Container>
     )
   }

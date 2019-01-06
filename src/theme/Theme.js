@@ -8,6 +8,7 @@ const Theme = {
     white: '#fff',
     muted: 'rgba(0,0,0,.54)',
     primary: '#651EFF',
+    error: '#E74C3C',
   },
 }
 
