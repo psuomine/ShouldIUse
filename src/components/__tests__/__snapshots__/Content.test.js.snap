@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> Makes query call and shows data 1`] = `
+<div
+  class="sc-jzJRlG hEFIsW"
+>
+  <h1
+    class="sc-bdVaJa eAkhWA"
+    color="text"
+  >
+    Should i use the NPM library?
+  </h1>
+  <div
+    class="sc-cSHVUG iXbyGG"
+  >
+    <div
+      class="sc-htoDjs bJvByQ"
+    >
+      <div
+        class="sc-dnqmqq fpDMrV"
+      >
+        <h3
+          class="sc-htpNat ctLKUJ"
+          color="text"
+          data-testid="title"
+        >
+          Search the npm package
+        </h3>
+      </div>
+      <form
+        data-testid="form"
+      >
+        <div
+          class="sc-gzVnrw cQsWNL"
+        >
+          <input
+            class="sc-bxivhb iuSYkE"
+            name="name"
+            placeholder="Package name"
+            value=""
+          />
+          <input
+            class="sc-bxivhb iuSYkE"
+            name="owner"
+            placeholder="Package owner"
+            value=""
+          />
+        </div>
+        <button
+          class="sc-bZQynM hxnWGE"
+          data-testid="action-button"
+          disabled=""
+          type="submit"
+        >
+          <p
+            class="sc-ifAKCX fMakYv"
+            color="muted"
+            font-weight="500"
+          >
+            SEARCH PACKAGE
+          </p>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    class="sc-gqjmRU gmEXKq"
+  >
+    <h2
+      class="sc-bwzfXH fcawr"
+      color="text"
+    >
+      <a
+        class="sc-jTzLTM beSbpA"
+        href="https://lodash.com/"
+        target="_blank"
+      >
+        lodash
+      </a>
+    </h2>
+    <p
+      class="sc-ifAKCX jDDZCo"
+      color="text"
+      font-weight="400"
+    >
+      A modern JavaScript utility library delivering modularity, performance, & extras.
+    </p>
+    <div
+      class="sc-VigVT ciAZDt"
+      data-testid="stat-container"
+    >
+      <div
+        class="sc-iwsKbI gtFgoO"
+      >
+        <h3
+          class="sc-htpNat sc-gZMcBi jphZeL"
+          color="muted"
+          data-testid="stat-title"
+        >
+          Open issues
+        </h3>
+        <h2
+          class="sc-bwzfXH evpEzE"
+          color="primary"
+          data-testid="stat-value"
+        >
+          1
+        </h2>
+      </div>
+      <div
+        class="sc-iwsKbI gtFgoO"
+      >
+        <h3
+          class="sc-htpNat sc-gZMcBi jphZeL"
+          color="muted"
+          data-testid="stat-title"
+        >
+          Forks
+        </h3>
+        <h2
+          class="sc-bwzfXH evpEzE"
+          color="primary"
+          data-testid="stat-value"
+        >
+          3780
+        </h2>
+      </div>
+      <div
+        class="sc-iwsKbI gtFgoO"
+      >
+        <h3
+          class="sc-htpNat sc-gZMcBi jphZeL"
+          color="muted"
+          data-testid="stat-title"
+        >
+          Starred
+        </h3>
+        <h2
+          class="sc-bwzfXH evpEzE"
+          color="primary"
+          data-testid="stat-value"
+        >
+          36478
+        </h2>
+      </div>
+      <div
+        class="sc-iwsKbI gtFgoO"
+      >
+        <h3
+          class="sc-htpNat sc-gZMcBi jphZeL"
+          color="muted"
+          data-testid="stat-title"
+        >
+          Watchers
+        </h3>
+        <h2
+          class="sc-bwzfXH evpEzE"
+          color="primary"
+          data-testid="stat-value"
+        >
+          862
+        </h2>
+      </div>
+    </div>
+  </div>
+  
+</div>
+`;
