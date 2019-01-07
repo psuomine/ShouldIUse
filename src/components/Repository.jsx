@@ -34,7 +34,7 @@ const Repository = ({
     {isArchived ? (
       <BodyText>This repository is archived!</BodyText>
     ) : (
-      <RepositoryStats>
+      <RepositoryStats data-testid="stat-container">
         <RepositoryStat title="Open issues" value={openIssues.totalCount} unit={'pcs'} />
         <RepositoryStat title="Forks" value={forkCount} unit={'pcs'} />
         <RepositoryStat title="Starred" value={stargazers.totalCount} unit={'pcs'} />

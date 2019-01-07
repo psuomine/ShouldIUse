@@ -28,6 +28,7 @@
     "precommit": "lint-staged"
   },
   "devDependencies": {
+    "jest-dom": "^3.0.0",
     "react-testing-library": "^4.1.7"
   },
   "eslintConfig": {

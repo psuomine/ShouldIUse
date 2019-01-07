@@ -28,7 +28,7 @@ const RepositoryStat = ({ title, value }) => (
 
 RepositoryStat.propTypes = {
   title: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 export default RepositoryStat
