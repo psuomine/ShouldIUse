@@ -15,6 +15,12 @@ REACT_APP_GITHUB_ACCESS_TOKEN=*ACCESS TOKEN HERE*
 NODE_PATH="src/"
 ```
 
+Run project
+
+```
+yarn start
+```
+
 ### Run tests
 
 Run tests with a next command
