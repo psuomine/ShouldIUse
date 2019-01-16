@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Container = styled.div`
-  display: flex;
-  width: 48px;
-  height: 48px;
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  border-radius: 100px;
+const IconSvg = styled.svg`
+  fill: ${({ color, theme }) => (color ? color : theme.primary)};
 `
 
-export default class Icon extends Component {
-  render() {
-    return (
-      <Container type={this.props.backgroundColor}>
-        <div />
-      </Container>
-    )
-  }
-}
+const Icon = ({ icon, height, width, color }) => (
+  <IconSvg color={color} width={width} height={height}>
+    <path d={icon} />
+  </IconSvg>
+)
 
 Icon.propTypes = {
-  backgroundColor: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['success', 'error']),
+  icon: PropTypes.string.isRequired,
+  size: PropTypes.number,
+  color: PropTypes.string,
 }
+
+Icon.defaultProps = {
+  height: 24,
+  width: 24,
+}
+
+export default Icon

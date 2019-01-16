@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { H1 } from 'components/styles/Heading'
 import { BodyText } from 'components/styles/Typography'
-import Icon from 'components/Icon'
+import StatusIcon from 'components/StatusIcon'
 
 const Container = styled.div`
   display: flex;
@@ -22,14 +22,12 @@ const Value = styled(H1)`
   letter-spacing: 2.5px;
 `
 
-const RepositoryStat = ({ title, value }) => {
-  const formatAbbreviateNumber = value => (value > 999 ? `${(value / 999).toFixed(1)}k` : value)
-
+const RepositoryStat = ({ title, value, isValid }) => {
   return (
     <Container>
-      <Icon backgroundColor={'rgba(23,195,123, .12)'} />
+      <StatusIcon isValid={isValid} />
       <Value data-testid="stat-value" color="primary">
-        {formatAbbreviateNumber(value)}
+        {value}
       </Value>
       <BodyText data-testid="stat-title" color="muted">
         {title}
