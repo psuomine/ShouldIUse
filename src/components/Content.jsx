@@ -34,9 +34,6 @@ class Content extends Component {
 
   render() {
     const { repository, errors } = this.state
-
-    console.log('repo', repository)
-
     return (
       <Container>
         <PageTitle title="Should i use the NPM library?" />

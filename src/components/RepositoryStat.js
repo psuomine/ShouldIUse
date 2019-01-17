@@ -18,6 +18,7 @@ const Container = styled.div`
 `
 
 const Value = styled(H1)`
+  margin-top: 24px;
   font-weight: 700;
   letter-spacing: 2.5px;
 `
