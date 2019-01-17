@@ -7,8 +7,8 @@ const IconSvg = styled.svg`
 `
 
 const Icon = ({ icon, height, width, color }) => (
-  <IconSvg color={color} width={width} height={height}>
-    <path d={icon} />
+  <IconSvg data-testid="svg-icon" color={color} width={width} height={height}>
+    <path data-testid="svg-icon-path" d={icon} />
   </IconSvg>
 )
 
