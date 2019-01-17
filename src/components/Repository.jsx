@@ -11,12 +11,15 @@ const RepositoryContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 48px;
+  width: 100%;
 `
 
 const RepositoryStats = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  grid-gap: 24px;
   margin-top: 32px;
+  justify-content: center;
 `
 
 const Link = styled.a`

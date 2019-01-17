@@ -5,7 +5,7 @@ exports[`<SearchCard /> renders error icon if isValid is true 1`] = `
   class="sc-gzVnrw fiCOXn"
 >
   <div
-    class="sc-bZQynM drNsaU"
+    class="sc-bZQynM cZJhhU"
   >
     <svg
       class="sc-EHOje ibVUnr"
@@ -43,7 +43,7 @@ exports[`<SearchCard /> renders success icon if isValid is true, snapshot 1`] = 
   class="sc-gzVnrw fiCOXn"
 >
   <div
-    class="sc-bZQynM dLoydy"
+    class="sc-bZQynM gpLXoD"
   >
     <svg
       class="sc-EHOje hfLPRj"

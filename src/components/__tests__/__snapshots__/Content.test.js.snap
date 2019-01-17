@@ -2,7 +2,7 @@
 
 exports[`<Content /> Makes query call and shows data 1`] = `
 <div
-  class="sc-kAzzGY jYujKw"
+  class="sc-kAzzGY bBpNYS"
 >
   <h1
     class="sc-bdVaJa eAkhWA"
@@ -64,7 +64,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
     </div>
   </div>
   <div
-    class="sc-jTzLTM iPHoyR"
+    class="sc-jTzLTM eFONKn"
   >
     <h2
       class="sc-bwzfXH fcawr"
@@ -86,14 +86,14 @@ exports[`<Content /> Makes query call and shows data 1`] = `
       A modern JavaScript utility library delivering modularity, performance, & extras.
     </p>
     <div
-      class="sc-fjdhpX PYhUU"
+      class="sc-fjdhpX hWvGuu"
       data-testid="stat-container"
     >
       <div
         class="sc-gqjmRU cWIcwD"
       >
         <div
-          class="sc-gZMcBi TaTJg"
+          class="sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -128,7 +128,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         class="sc-gqjmRU cWIcwD"
       >
         <div
-          class="sc-gZMcBi TaTJg"
+          class="sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -163,7 +163,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         class="sc-gqjmRU cWIcwD"
       >
         <div
-          class="sc-gZMcBi TaTJg"
+          class="sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -198,7 +198,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         class="sc-gqjmRU cWIcwD"
       >
         <div
-          class="sc-gZMcBi TaTJg"
+          class="sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
