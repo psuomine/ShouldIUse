@@ -4,13 +4,18 @@ import RepositoryStat from '../RepositoryStat'
 
 describe('<SearchCard />', () => {
   it('renders prop values', () => {
-    const { getByTestId } = render(<RepositoryStat title="lodash" value="8" />)
+    const { getByTestId } = render(<RepositoryStat title="lodash" value="8" isValid={true} />)
     expect(getByTestId('stat-title').textContent).toBe('lodash')
     expect(getByTestId('stat-value').textContent).toBe('8')
   })
 
-  it('snapshot', () => {
-    const { container } = render(<RepositoryStat title="lodash" value="8" />)
+  it('renders success icon if isValid is true, snapshot', () => {
+    const { container } = render(<RepositoryStat title="lodash" value="8" isValid={true} />)
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('renders error icon if isValid is true', () => {
+    const { container } = render(<RepositoryStat title="lodash" value="8" isValid={false} />)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

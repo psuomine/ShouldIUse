@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> renders icon based on props 1`] = `
+<path
+  d="M7.42449 14.5737L2.42002"
+  data-testid="svg-icon-path"
+/>
+`;

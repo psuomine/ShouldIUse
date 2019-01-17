@@ -1,22 +1,77 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SearchCard /> snapshot 1`] = `
+exports[`<SearchCard /> renders error icon if isValid is true 1`] = `
 <div
-  class="sc-bxivhb fMKgrM"
+  class="sc-gzVnrw fiCOXn"
 >
-  <h3
-    class="sc-htpNat sc-ifAKCX bBRVin"
-    color="muted"
-    data-testid="stat-title"
+  <div
+    class="sc-bZQynM drNsaU"
   >
-    lodash
-  </h3>
-  <h2
-    class="sc-bwzfXH evpEzE"
+    <svg
+      class="sc-EHOje ibVUnr"
+      color="rgb(250,71,79)"
+      data-testid="svg-icon"
+      height="24"
+      width="24"
+    >
+      <path
+        d="M24 2.41714L21.5829 0L12 9.58286L2.41714 0L0 2.41714L9.58286 12L0 21.5829L2.41714 24L12 14.4171L21.5829 24L24 21.5829L14.4171 12L24 2.41714Z"
+        data-testid="svg-icon-path"
+      />
+    </svg>
+  </div>
+  <h1
+    class="sc-bdVaJa sc-htoDjs hbgios"
     color="primary"
     data-testid="stat-value"
   >
     8
-  </h2>
+  </h1>
+  <p
+    class="sc-bxivhb dzllQf"
+    color="muted"
+    data-testid="stat-title"
+    font-weight="400"
+  >
+    lodash
+  </p>
+</div>
+`;
+
+exports[`<SearchCard /> renders success icon if isValid is true, snapshot 1`] = `
+<div
+  class="sc-gzVnrw fiCOXn"
+>
+  <div
+    class="sc-bZQynM dLoydy"
+  >
+    <svg
+      class="sc-EHOje hfLPRj"
+      color="rgb(23,195,123)"
+      data-testid="svg-icon"
+      height="18"
+      width="24"
+    >
+      <path
+        d="M7.42449 14.5737L2.42002 9.56926C1.86238 9.01162 0.975871 9.01162 0.418231 9.56926C-0.13941 10.1269 -0.13941 11.0134 0.418231 11.571L6.40929 17.5621C6.96693 18.1197 7.86774 18.1197 8.42538 17.5621L23.5818 2.42002C24.1394 1.86238 24.1394 0.975871 23.5818 0.418231C23.0241 -0.13941 22.1376 -0.13941 21.58 0.418231L7.42449 14.5737Z"
+        data-testid="svg-icon-path"
+      />
+    </svg>
+  </div>
+  <h1
+    class="sc-bdVaJa sc-htoDjs hbgios"
+    color="primary"
+    data-testid="stat-value"
+  >
+    8
+  </h1>
+  <p
+    class="sc-bxivhb dzllQf"
+    color="muted"
+    data-testid="stat-title"
+    font-weight="400"
+  >
+    lodash
+  </p>
 </div>
 `;

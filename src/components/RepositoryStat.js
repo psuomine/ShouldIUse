@@ -1,30 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { H3, H2 } from 'components/styles/Heading'
+import { H1 } from 'components/styles/Heading'
+import { BodyText } from 'components/styles/Typography'
+import StatusIcon from 'components/StatusIcon'
 
 const Container = styled.div`
   display: flex;
-  width: 320px;
+  width: 280px;
+  height: 245px;
   flex-direction: column;
   align-items: center;
   margin-bottom: 24px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 24px;
 `
 
-const Title = styled(H3)`
-  margin-bottom: 8px;
+const Value = styled(H1)`
+  margin-top: 24px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
 `
 
-const RepositoryStat = ({ title, value }) => (
-  <Container>
-    <Title data-testid="stat-title" color="muted">
-      {title}
-    </Title>
-    <H2 data-testid="stat-value" color="primary">
-      {value}
-    </H2>
-  </Container>
-)
+const RepositoryStat = ({ title, value, isValid }) => {
+  return (
+    <Container>
+      <StatusIcon isValid={isValid} />
+      <Value data-testid="stat-value" color="primary">
+        {value}
+      </Value>
+      <BodyText data-testid="stat-title" color="muted">
+        {title}
+      </BodyText>
+    </Container>
+  )
+}
 
 RepositoryStat.propTypes = {
   title: PropTypes.string.isRequired,

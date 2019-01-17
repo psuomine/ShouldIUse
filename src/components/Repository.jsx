@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { H2 } from 'components/styles/Heading'
 import { BodyText } from 'components/styles/Typography'
 import RepositoryStat from 'components/RepositoryStat'
+import { formatAbbreviateNumber } from 'utils/format'
+import { STAT_LIMIT_MAP } from 'constants/index'
 
 const RepositoryContainer = styled.div`
   display: flex;
@@ -23,26 +25,49 @@ const Link = styled.a`
 
 const Repository = ({
   repository: { homepageUrl, name, description, isArchived, forkCount, openIssues, stargazers, watchers },
-}) => (
-  <RepositoryContainer>
-    <H2>
-      <Link href={homepageUrl} target="_blank">
-        {name}
-      </Link>
-    </H2>
-    <BodyText>{description}</BodyText>
-    {isArchived ? (
-      <BodyText>This repository is archived!</BodyText>
-    ) : (
-      <RepositoryStats data-testid="stat-container">
-        <RepositoryStat title="Open issues" value={openIssues.totalCount} unit={'pcs'} />
-        <RepositoryStat title="Forks" value={forkCount} unit={'pcs'} />
-        <RepositoryStat title="Starred" value={stargazers.totalCount} unit={'pcs'} />
-        <RepositoryStat title="Watchers" value={watchers.totalCount} unit={'pcs'} />
-      </RepositoryStats>
-    )}
-  </RepositoryContainer>
-)
+}) => {
+  const isStatValid = (key, value) => {
+    const mapItem = STAT_LIMIT_MAP[key]
+    return mapItem.isHigherBad ? value < mapItem.limit : value > mapItem.limit
+  }
+
+  return (
+    <RepositoryContainer>
+      <H2>
+        <Link href={homepageUrl} target="_blank">
+          {name}
+        </Link>
+      </H2>
+      <BodyText>{description}</BodyText>
+      {isArchived ? (
+        <BodyText>This repository is archived!</BodyText>
+      ) : (
+        <RepositoryStats data-testid="stat-container">
+          <RepositoryStat
+            title="Open issues"
+            value={formatAbbreviateNumber(openIssues.totalCount)}
+            isValid={isStatValid('openIssues', openIssues.totalCount)}
+          />
+          <RepositoryStat
+            title="Forks"
+            value={formatAbbreviateNumber(forkCount)}
+            isValid={isStatValid('forks', forkCount)}
+          />
+          <RepositoryStat
+            title="Starred"
+            value={formatAbbreviateNumber(stargazers.totalCount)}
+            isValid={isStatValid('starred', stargazers.totalCount)}
+          />
+          <RepositoryStat
+            title="Watchers"
+            value={formatAbbreviateNumber(watchers.totalCount)}
+            isValid={isStatValid('watchers', watchers.totalCount)}
+          />
+        </RepositoryStats>
+      )}
+    </RepositoryContainer>
+  )
+}
 
 const totalCountPropType = PropTypes.shape({
   totalCount: PropTypes.number.isRequired,

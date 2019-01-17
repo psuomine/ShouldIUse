@@ -2,7 +2,7 @@
 
 exports[`<Content /> Makes query call and shows data 1`] = `
 <div
-  class="sc-jzJRlG hEFIsW"
+  class="sc-kAzzGY jYujKw"
 >
   <h1
     class="sc-bdVaJa eAkhWA"
@@ -11,7 +11,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
     Should i use the NPM library?
   </h1>
   <div
-    class="sc-cSHVUG iXbyGG"
+    class="sc-chPdSV fTUBhs"
   >
     <div
       class="sc-htoDjs bJvByQ"
@@ -64,14 +64,14 @@ exports[`<Content /> Makes query call and shows data 1`] = `
     </div>
   </div>
   <div
-    class="sc-gqjmRU gmEXKq"
+    class="sc-jTzLTM iPHoyR"
   >
     <h2
       class="sc-bwzfXH fcawr"
       color="text"
     >
       <a
-        class="sc-jTzLTM beSbpA"
+        class="sc-jzJRlG cvFTEk"
         href="https://lodash.com/"
         target="_blank"
       >
@@ -86,80 +86,148 @@ exports[`<Content /> Makes query call and shows data 1`] = `
       A modern JavaScript utility library delivering modularity, performance, & extras.
     </p>
     <div
-      class="sc-VigVT ciAZDt"
+      class="sc-fjdhpX PYhUU"
       data-testid="stat-container"
     >
       <div
-        class="sc-iwsKbI gtFgoO"
+        class="sc-gqjmRU cWIcwD"
       >
-        <h3
-          class="sc-htpNat sc-gZMcBi jphZeL"
-          color="muted"
-          data-testid="stat-title"
+        <div
+          class="sc-gZMcBi TaTJg"
         >
-          Open issues
-        </h3>
-        <h2
-          class="sc-bwzfXH evpEzE"
+          <svg
+            class="sc-iwsKbI dKxmBL"
+            color="rgb(23,195,123)"
+            data-testid="svg-icon"
+            height="18"
+            width="24"
+          >
+            <path
+              d="M7.42449 14.5737L2.42002 9.56926C1.86238 9.01162 0.975871 9.01162 0.418231 9.56926C-0.13941 10.1269 -0.13941 11.0134 0.418231 11.571L6.40929 17.5621C6.96693 18.1197 7.86774 18.1197 8.42538 17.5621L23.5818 2.42002C24.1394 1.86238 24.1394 0.975871 23.5818 0.418231C23.0241 -0.13941 22.1376 -0.13941 21.58 0.418231L7.42449 14.5737Z"
+              data-testid="svg-icon-path"
+            />
+          </svg>
+        </div>
+        <h1
+          class="sc-bdVaJa sc-VigVT cLLrpc"
           color="primary"
           data-testid="stat-value"
         >
           1
-        </h2>
-      </div>
-      <div
-        class="sc-iwsKbI gtFgoO"
-      >
-        <h3
-          class="sc-htpNat sc-gZMcBi jphZeL"
+        </h1>
+        <p
+          class="sc-ifAKCX dajiYn"
           color="muted"
           data-testid="stat-title"
+          font-weight="400"
+        >
+          Open issues
+        </p>
+      </div>
+      <div
+        class="sc-gqjmRU cWIcwD"
+      >
+        <div
+          class="sc-gZMcBi TaTJg"
+        >
+          <svg
+            class="sc-iwsKbI dKxmBL"
+            color="rgb(23,195,123)"
+            data-testid="svg-icon"
+            height="18"
+            width="24"
+          >
+            <path
+              d="M7.42449 14.5737L2.42002 9.56926C1.86238 9.01162 0.975871 9.01162 0.418231 9.56926C-0.13941 10.1269 -0.13941 11.0134 0.418231 11.571L6.40929 17.5621C6.96693 18.1197 7.86774 18.1197 8.42538 17.5621L23.5818 2.42002C24.1394 1.86238 24.1394 0.975871 23.5818 0.418231C23.0241 -0.13941 22.1376 -0.13941 21.58 0.418231L7.42449 14.5737Z"
+              data-testid="svg-icon-path"
+            />
+          </svg>
+        </div>
+        <h1
+          class="sc-bdVaJa sc-VigVT cLLrpc"
+          color="primary"
+          data-testid="stat-value"
+        >
+          3.8k
+        </h1>
+        <p
+          class="sc-ifAKCX dajiYn"
+          color="muted"
+          data-testid="stat-title"
+          font-weight="400"
         >
           Forks
-        </h3>
-        <h2
-          class="sc-bwzfXH evpEzE"
+        </p>
+      </div>
+      <div
+        class="sc-gqjmRU cWIcwD"
+      >
+        <div
+          class="sc-gZMcBi TaTJg"
+        >
+          <svg
+            class="sc-iwsKbI dKxmBL"
+            color="rgb(23,195,123)"
+            data-testid="svg-icon"
+            height="18"
+            width="24"
+          >
+            <path
+              d="M7.42449 14.5737L2.42002 9.56926C1.86238 9.01162 0.975871 9.01162 0.418231 9.56926C-0.13941 10.1269 -0.13941 11.0134 0.418231 11.571L6.40929 17.5621C6.96693 18.1197 7.86774 18.1197 8.42538 17.5621L23.5818 2.42002C24.1394 1.86238 24.1394 0.975871 23.5818 0.418231C23.0241 -0.13941 22.1376 -0.13941 21.58 0.418231L7.42449 14.5737Z"
+              data-testid="svg-icon-path"
+            />
+          </svg>
+        </div>
+        <h1
+          class="sc-bdVaJa sc-VigVT cLLrpc"
           color="primary"
           data-testid="stat-value"
         >
-          3780
-        </h2>
-      </div>
-      <div
-        class="sc-iwsKbI gtFgoO"
-      >
-        <h3
-          class="sc-htpNat sc-gZMcBi jphZeL"
+          36.5k
+        </h1>
+        <p
+          class="sc-ifAKCX dajiYn"
           color="muted"
           data-testid="stat-title"
+          font-weight="400"
         >
           Starred
-        </h3>
-        <h2
-          class="sc-bwzfXH evpEzE"
-          color="primary"
-          data-testid="stat-value"
-        >
-          36478
-        </h2>
+        </p>
       </div>
       <div
-        class="sc-iwsKbI gtFgoO"
+        class="sc-gqjmRU cWIcwD"
       >
-        <h3
-          class="sc-htpNat sc-gZMcBi jphZeL"
-          color="muted"
-          data-testid="stat-title"
+        <div
+          class="sc-gZMcBi TaTJg"
         >
-          Watchers
-        </h3>
-        <h2
-          class="sc-bwzfXH evpEzE"
+          <svg
+            class="sc-iwsKbI dKxmBL"
+            color="rgb(23,195,123)"
+            data-testid="svg-icon"
+            height="18"
+            width="24"
+          >
+            <path
+              d="M7.42449 14.5737L2.42002 9.56926C1.86238 9.01162 0.975871 9.01162 0.418231 9.56926C-0.13941 10.1269 -0.13941 11.0134 0.418231 11.571L6.40929 17.5621C6.96693 18.1197 7.86774 18.1197 8.42538 17.5621L23.5818 2.42002C24.1394 1.86238 24.1394 0.975871 23.5818 0.418231C23.0241 -0.13941 22.1376 -0.13941 21.58 0.418231L7.42449 14.5737Z"
+              data-testid="svg-icon-path"
+            />
+          </svg>
+        </div>
+        <h1
+          class="sc-bdVaJa sc-VigVT cLLrpc"
           color="primary"
           data-testid="stat-value"
         >
           862
-        </h2>
+        </h1>
+        <p
+          class="sc-ifAKCX dajiYn"
+          color="muted"
+          data-testid="stat-title"
+          font-weight="400"
+        >
+          Watchers
+        </p>
       </div>
     </div>
   </div>
