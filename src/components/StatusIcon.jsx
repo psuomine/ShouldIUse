@@ -8,8 +8,8 @@ const IconBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   background-color: ${({ theme, isValid }) => (isValid ? theme.successBackground : theme.errorBackground)};
 `
