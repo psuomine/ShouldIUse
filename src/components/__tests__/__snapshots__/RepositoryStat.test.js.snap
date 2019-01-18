@@ -2,10 +2,10 @@
 
 exports[`<SearchCard /> renders error icon if isValid is true 1`] = `
 <div
-  class="sc-gzVnrw fiCOXn"
+  class="sc-gzVnrw bobjPL"
 >
   <div
-    class="sc-bZQynM cZJhhU"
+    class="sc-dnqmqq daCBqt sc-bZQynM cZJhhU"
   >
     <svg
       class="sc-EHOje ibVUnr"
@@ -21,7 +21,7 @@ exports[`<SearchCard /> renders error icon if isValid is true 1`] = `
     </svg>
   </div>
   <h1
-    class="sc-bdVaJa sc-htoDjs hbgios"
+    class="sc-bdVaJa sc-htoDjs iImRka"
     color="primary"
     data-testid="stat-value"
   >
@@ -40,10 +40,10 @@ exports[`<SearchCard /> renders error icon if isValid is true 1`] = `
 
 exports[`<SearchCard /> renders success icon if isValid is true, snapshot 1`] = `
 <div
-  class="sc-gzVnrw fiCOXn"
+  class="sc-gzVnrw bobjPL"
 >
   <div
-    class="sc-bZQynM gpLXoD"
+    class="sc-dnqmqq daCBqt sc-bZQynM gpLXoD"
   >
     <svg
       class="sc-EHOje hfLPRj"
@@ -59,7 +59,7 @@ exports[`<SearchCard /> renders success icon if isValid is true, snapshot 1`] = 
     </svg>
   </div>
   <h1
-    class="sc-bdVaJa sc-htoDjs hbgios"
+    class="sc-bdVaJa sc-htoDjs iImRka"
     color="primary"
     data-testid="stat-value"
   >

@@ -6,6 +6,7 @@ import { BodyText } from 'components/styles/Typography'
 import StatusIcon from 'components/StatusIcon'
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   width: 280px;
   height: 245px;
@@ -15,18 +16,24 @@ const Container = styled.div`
   background-color: white;
   border-radius: 4px;
   padding: 24px;
+  justify-content: center;
 `
 
 const Value = styled(H1)`
-  margin-top: 24px;
+  margin-top: 32px;
   font-weight: 700;
   letter-spacing: 2.5px;
+`
+
+const StatusIconAbsolute = styled(StatusIcon)`
+  position: absolute;
+  top: 24px;
 `
 
 const RepositoryStat = ({ title, value, isValid }) => {
   return (
     <Container>
-      <StatusIcon isValid={isValid} />
+      <StatusIconAbsolute isValid={isValid} />
       <Value data-testid="stat-value" color="primary">
         {value}
       </Value>

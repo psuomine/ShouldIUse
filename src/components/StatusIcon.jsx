@@ -13,8 +13,8 @@ const IconBackground = styled.div`
   border-radius: 100%;
   background-color: ${({ theme, isValid }) => (isValid ? theme.successBackground : theme.errorBackground)};
 `
-const StatusIcon = ({ isValid, theme }) => (
-  <IconBackground isValid={isValid}>
+const StatusIcon = ({ isValid, theme, className }) => (
+  <IconBackground className={className} isValid={isValid}>
     <Icon
       icon={isValid ? ICONS.success : ICONS.error}
       color={isValid ? theme.success : theme.error}
