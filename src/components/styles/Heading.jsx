@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import { below } from 'components/styles/utils'
 
 const headingStyles = css`
   color: ${props => props.theme.typography[props.color]};
@@ -11,6 +12,9 @@ const headingStyles = css`
 export const H1 = styled.h1`
   font-size: 48px;
   ${headingStyles}
+  ${below.small`
+    font-size: 35px;
+  `}
 `
 
 export const H2 = styled.h2`

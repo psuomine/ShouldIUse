@@ -19,6 +19,7 @@ const Container = styled.div`
 const SearchCardLayout = styled.div`
   max-width: 600px;
   width: 100%;
+  padding: 0 24px;
 `
 
 class Content extends Component {

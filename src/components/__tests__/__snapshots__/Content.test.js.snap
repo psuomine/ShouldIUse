@@ -2,16 +2,16 @@
 
 exports[`<Content /> Makes query call and shows data 1`] = `
 <div
-  class="sc-kAzzGY bBpNYS"
+  class="sc-chPdSV TliYb"
 >
   <h1
-    class="sc-bdVaJa eAkhWA"
+    class="sc-bdVaJa gvZhOw"
     color="text"
   >
     Should i use the NPM library?
   </h1>
   <div
-    class="sc-chPdSV fTUBhs"
+    class="sc-kgoBCf jDcGq"
   >
     <div
       class="sc-htoDjs bJvByQ"
@@ -64,14 +64,14 @@ exports[`<Content /> Makes query call and shows data 1`] = `
     </div>
   </div>
   <div
-    class="sc-jTzLTM eFONKn"
+    class="sc-fjdhpX aVhrh"
   >
     <h2
       class="sc-bwzfXH fcawr"
       color="text"
     >
       <a
-        class="sc-jzJRlG cvFTEk"
+        class="sc-cSHVUG hgwPCY"
         href="https://lodash.com/"
         target="_blank"
       >
@@ -86,14 +86,14 @@ exports[`<Content /> Makes query call and shows data 1`] = `
       A modern JavaScript utility library delivering modularity, performance, & extras.
     </p>
     <div
-      class="sc-fjdhpX hWvGuu"
+      class="sc-jzJRlG hBDaQg"
       data-testid="stat-container"
     >
       <div
-        class="sc-gqjmRU cWIcwD"
+        class="sc-gqjmRU bYfyc"
       >
         <div
-          class="sc-gZMcBi bbxdZP"
+          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -109,7 +109,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT cLLrpc"
+          class="sc-bdVaJa sc-VigVT bqsyNE"
           color="primary"
           data-testid="stat-value"
         >
@@ -125,10 +125,10 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU cWIcwD"
+        class="sc-gqjmRU bYfyc"
       >
         <div
-          class="sc-gZMcBi bbxdZP"
+          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -144,7 +144,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT cLLrpc"
+          class="sc-bdVaJa sc-VigVT bqsyNE"
           color="primary"
           data-testid="stat-value"
         >
@@ -160,10 +160,10 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU cWIcwD"
+        class="sc-gqjmRU bYfyc"
       >
         <div
-          class="sc-gZMcBi bbxdZP"
+          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -179,7 +179,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT cLLrpc"
+          class="sc-bdVaJa sc-VigVT bqsyNE"
           color="primary"
           data-testid="stat-value"
         >
@@ -195,10 +195,10 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU cWIcwD"
+        class="sc-gqjmRU bYfyc"
       >
         <div
-          class="sc-gZMcBi bbxdZP"
+          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
         >
           <svg
             class="sc-iwsKbI dKxmBL"
@@ -214,7 +214,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT cLLrpc"
+          class="sc-bdVaJa sc-VigVT bqsyNE"
           color="primary"
           data-testid="stat-value"
         >
