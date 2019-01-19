@@ -25,6 +25,8 @@ const StatusIcon = ({ isValid, theme, className }) => (
 
 StatusIcon.propTypes = {
   isValid: PropTypes.bool.isRequired,
+  theme: PropTypes.shape().isRequired,
+  className: PropTypes.string.isRequired,
 }
 
 export default withTheme(StatusIcon)

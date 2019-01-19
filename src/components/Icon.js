@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const IconSvg = styled.svg`
-  fill: ${({ color, theme }) => (color ? color : theme.primary)};
+  fill: ${({ color, theme }) => color || theme.primary};
 `
 
 const Icon = ({ icon, height, width, color }) => (
@@ -14,13 +14,15 @@ const Icon = ({ icon, height, width, color }) => (
 
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
-  size: PropTypes.number,
+  height: PropTypes.number,
+  width: PropTypes.number,
   color: PropTypes.string,
 }
 
 Icon.defaultProps = {
   height: 24,
   width: 24,
+  color: '',
 }
 
 export default Icon

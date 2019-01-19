@@ -89,7 +89,7 @@ Repository.propTypes = {
     openIssues: totalCountPropType,
     stargazers: totalCountPropType,
     watchers: totalCountPropType,
-  }),
+  }).isRequired,
 }
 
 export default Repository

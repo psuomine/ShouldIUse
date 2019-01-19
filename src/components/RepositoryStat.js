@@ -30,23 +30,22 @@ const StatusIconAbsolute = styled(StatusIcon)`
   top: 24px;
 `
 
-const RepositoryStat = ({ title, value, isValid }) => {
-  return (
-    <Container>
-      <StatusIconAbsolute isValid={isValid} />
-      <Value data-testid="stat-value" color="primary">
-        {value}
-      </Value>
-      <BodyText data-testid="stat-title" color="muted">
-        {title}
-      </BodyText>
-    </Container>
-  )
-}
+const RepositoryStat = ({ title, value, isValid }) => (
+  <Container>
+    <StatusIconAbsolute isValid={isValid} />
+    <Value data-testid="stat-value" color="primary">
+      {value}
+    </Value>
+    <BodyText data-testid="stat-title" color="muted">
+      {title}
+    </BodyText>
+  </Container>
+)
 
 RepositoryStat.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  isValid: PropTypes.bool.isRequired,
 }
 
 export default RepositoryStat

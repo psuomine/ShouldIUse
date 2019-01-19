@@ -1,9 +1,9 @@
 import React from 'react'
 import { render, fireEvent, waitForElement } from 'testUtils'
-import Content from '../Content'
+import gql from 'graphql-tag'
 import { MockedProvider } from 'react-apollo/test-utils'
 import { getRepository } from 'graphql/queries'
-import gql from 'graphql-tag'
+import Content from '../Content'
 
 const mocks = [
   {

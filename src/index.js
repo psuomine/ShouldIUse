@@ -6,10 +6,10 @@ import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloProvider } from 'react-apollo'
 import { onError } from 'apollo-link-error'
 import { ApolloLink } from 'apollo-link'
+import { ThemeProvider } from 'styled-components'
 import App from './App'
 import GlobalStyle from './theme/GlobalStyle'
 import Theme from './theme/Theme'
-import { ThemeProvider } from 'styled-components'
 
 const GITHUB_BASE_URL = 'https://api.github.com/graphql'
 

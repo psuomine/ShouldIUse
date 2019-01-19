@@ -25,13 +25,12 @@ const SearchCardLayout = styled.div`
 class Content extends Component {
   state = {
     repository: null,
-    isLoading: false,
     errors: null,
   }
 
-  handleSearchSuccess = ({ repository }) => this.setState({ repository, isLoading: false })
+  handleSearchSuccess = ({ repository }) => this.setState({ repository })
 
-  handleStartSearch = () => this.setState({ repository: null, isLoading: true, errors: '' })
+  handleStartSearch = () => this.setState({ repository: null, errors: '' })
 
   render() {
     const { repository, errors } = this.state
@@ -50,8 +49,8 @@ class Content extends Component {
                       variables: { name, owner },
                     })
                     this.handleSearchSuccess(data)
-                  } catch (errors) {
-                    this.setState({ errors })
+                  } catch (err) {
+                    this.setState({ errors: err })
                   }
                 }}
               />
