@@ -20,7 +20,7 @@ describe('<CardACtionButton />', () => {
   })
 
   it('disable button', () => {
-    const { getByTestId } = render(<CardActionButton title="default" type="button" isDisabled={true} />)
+    const { getByTestId } = render(<CardActionButton title="default" type="button" isDisabled />)
     expect(getByTestId('action-button').disabled).toBe(true)
   })
 })
