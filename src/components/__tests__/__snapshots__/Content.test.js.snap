@@ -64,14 +64,14 @@ exports[`<Content /> Makes query call and shows data 1`] = `
     </div>
   </div>
   <div
-    class="sc-fjdhpX aVhrh"
+    class="sc-kAzzGY hNDmZp"
   >
     <h2
       class="sc-bwzfXH fcawr"
       color="text"
     >
       <a
-        class="sc-cSHVUG hgwPCY"
+        class="sc-gZMcBi cPCvXL"
         href="https://lodash.com/"
         target="_blank"
       >
@@ -86,17 +86,17 @@ exports[`<Content /> Makes query call and shows data 1`] = `
       A modern JavaScript utility library delivering modularity, performance, & extras.
     </p>
     <div
-      class="sc-jzJRlG hBDaQg"
+      class="sc-cSHVUG dCaUhE"
       data-testid="stat-container"
     >
       <div
-        class="sc-gqjmRU bYfyc"
+        class="sc-jTzLTM ezEtjS"
       >
         <div
-          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
+          class="sc-jzJRlG ibjRax sc-VigVT hPkoPu"
         >
           <svg
-            class="sc-iwsKbI dKxmBL"
+            class="sc-gqjmRU dxluif"
             color="rgb(23,195,123)"
             data-testid="svg-icon"
             height="18"
@@ -109,7 +109,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT bqsyNE"
+          class="sc-bdVaJa sc-fjdhpX eUeDvZ"
           color="primary"
           data-testid="stat-value"
         >
@@ -125,13 +125,13 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU bYfyc"
+        class="sc-jTzLTM ezEtjS"
       >
         <div
-          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
+          class="sc-jzJRlG ibjRax sc-VigVT hPkoPu"
         >
           <svg
-            class="sc-iwsKbI dKxmBL"
+            class="sc-gqjmRU dxluif"
             color="rgb(23,195,123)"
             data-testid="svg-icon"
             height="18"
@@ -144,7 +144,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT bqsyNE"
+          class="sc-bdVaJa sc-fjdhpX eUeDvZ"
           color="primary"
           data-testid="stat-value"
         >
@@ -160,13 +160,13 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU bYfyc"
+        class="sc-jTzLTM ezEtjS"
       >
         <div
-          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
+          class="sc-jzJRlG ibjRax sc-VigVT hPkoPu"
         >
           <svg
-            class="sc-iwsKbI dKxmBL"
+            class="sc-gqjmRU dxluif"
             color="rgb(23,195,123)"
             data-testid="svg-icon"
             height="18"
@@ -179,7 +179,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT bqsyNE"
+          class="sc-bdVaJa sc-fjdhpX eUeDvZ"
           color="primary"
           data-testid="stat-value"
         >
@@ -195,13 +195,13 @@ exports[`<Content /> Makes query call and shows data 1`] = `
         </p>
       </div>
       <div
-        class="sc-gqjmRU bYfyc"
+        class="sc-jTzLTM ezEtjS"
       >
         <div
-          class="sc-jTzLTM fMhjvX sc-gZMcBi bbxdZP"
+          class="sc-jzJRlG ibjRax sc-VigVT hPkoPu"
         >
           <svg
-            class="sc-iwsKbI dKxmBL"
+            class="sc-gqjmRU dxluif"
             color="rgb(23,195,123)"
             data-testid="svg-icon"
             height="18"
@@ -214,7 +214,7 @@ exports[`<Content /> Makes query call and shows data 1`] = `
           </svg>
         </div>
         <h1
-          class="sc-bdVaJa sc-VigVT bqsyNE"
+          class="sc-bdVaJa sc-fjdhpX eUeDvZ"
           color="primary"
           data-testid="stat-value"
         >
@@ -231,6 +231,5 @@ exports[`<Content /> Makes query call and shows data 1`] = `
       </div>
     </div>
   </div>
-  
 </div>
 `;

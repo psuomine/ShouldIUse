@@ -17,17 +17,17 @@ const CardContent = styled.div`
   padding: 48px 48px 0 48px;
 `
 
-const SearchCard = ({ handleSearch }) => (
+const SearchCard = ({ handlePostForm }) => (
   <Card>
     <CardContent>
       <H3 data-testid="title">Search the npm package</H3>
     </CardContent>
-    <SearchCardForm handleSearch={handleSearch} />
+    <SearchCardForm handlePostForm={handlePostForm} />
   </Card>
 )
 
 SearchCard.propTypes = {
-  handleSearch: PropTypes.func.isRequired,
+  handlePostForm: PropTypes.func.isRequired,
 }
 
 export default SearchCard

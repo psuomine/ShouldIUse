@@ -22,21 +22,28 @@ const validate = values => {
 
 class SearchCardForm extends Component {
   handleSubmit = (values, { resetForm }) => {
-    const { handleSearch } = this.props
-    handleSearch(values.name, values.owner)
+    const { handlePostForm } = this.props
+    handlePostForm(values.name, values.owner)
     resetForm()
   }
 
   render() {
     return (
-      <Formik initialValues={{ name: '', owner: '' }} validate={validate} onSubmit={this.handleSubmit}>
+      <Formik
+        initialValues={{ name: '', owner: '' }}
+        validate={validate}
+        onSubmit={this.handleSubmit}
+      >
         {formProps => (
           <Form data-testid="form">
             <Fields>
               <SearchCardField name="name" placeholder="Package name" />
               <SearchCardField name="owner" placeholder="Package owner" />
             </Fields>
-            <CardActionButton title="SEARCH PACKAGE" isDisabled={!formProps.isValid} />
+            <CardActionButton
+              title="SEARCH PACKAGE"
+              isDisabled={!formProps.isValid}
+            />
           </Form>
         )}
       </Formik>
@@ -45,7 +52,7 @@ class SearchCardForm extends Component {
 }
 
 SearchCardForm.propTypes = {
-  handleSearch: PropTypes.func.isRequired,
+  handlePostForm: PropTypes.func.isRequired,
 }
 
 export default SearchCardForm

@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import gql from 'graphql-tag'
-import { ApolloConsumer } from 'react-apollo'
 import PageTitle from 'components/PageTitle'
 import SearchCard from 'components/SearchCard'
-import Repository from 'components/Repository'
-import { getRepository } from 'graphql/queries'
+import Repository from 'components/Repository/Repository'
 import ErrorMessage from 'components/ErrorMessage'
 
 const Container = styled.div`
@@ -24,41 +21,27 @@ const SearchCardLayout = styled.div`
 
 class Content extends Component {
   state = {
-    repository: null,
-    errors: null,
+    name: '',
+    owner: '',
   }
 
-  handleSearchSuccess = ({ repository }) => this.setState({ repository })
-
-  handleStartSearch = () => this.setState({ repository: null, errors: '' })
+  handlePostForm = (name, owner) => this.setState({ name, owner })
 
   render() {
-    const { repository, errors } = this.state
+    const { name, owner, errors } = this.state
     return (
       <Container>
         <PageTitle title="Should i use the NPM library?" />
-        <ApolloConsumer>
-          {client => (
-            <SearchCardLayout>
-              <SearchCard
-                handleSearch={async (name, owner) => {
-                  try {
-                    this.handleStartSearch()
-                    const { data } = await client.query({
-                      query: gql(getRepository),
-                      variables: { name, owner },
-                    })
-                    this.handleSearchSuccess(data)
-                  } catch (err) {
-                    this.setState({ errors: err })
-                  }
-                }}
-              />
-            </SearchCardLayout>
-          )}
-        </ApolloConsumer>
-        {repository && <Repository repository={repository} />}
-        {errors && errors.graphQLErrors && errors.graphQLErrors.map(err => <ErrorMessage message={err.message} />)}
+        <SearchCardLayout>
+          <SearchCard handlePostForm={this.handlePostForm} />
+        </SearchCardLayout>
+
+        {name && <Repository name={name} owner={owner} />}
+        {errors &&
+          errors.graphQLErrors &&
+          errors.graphQLErrors.map(err => (
+            <ErrorMessage message={err.message} />
+          ))}
       </Container>
     )
   }
