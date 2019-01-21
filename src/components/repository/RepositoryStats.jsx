@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import RepositoryStat from 'components/Repository/RepositoryStat'
+import RepositoryStat from 'components/repository/RepositoryStat'
 import { STAT_LIMIT_MAP } from 'constants/index'
 import { formatAbbreviateNumber } from 'utils/format'
 

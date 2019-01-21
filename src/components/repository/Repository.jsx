@@ -5,8 +5,8 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import { getRepository } from 'graphql/queries'
 import ErrorMessage from 'components/ErrorMessage'
-import RepositoryHeader from 'components/Repository/RepositoryHeader'
-import RepositoryStats from 'components/Repository/RepositoryStats'
+import RepositoryHeader from 'components/repository/RepositoryHeader'
+import RepositoryStats from 'components/repository/RepositoryStats'
 
 const RepositoryContainer = styled.div`
   display: flex;

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PageTitle from 'components/PageTitle'
 import SearchCard from 'components/SearchCard'
-import Repository from 'components/Repository/Repository'
+import Repository from 'components/repository/Repository'
 import ErrorMessage from 'components/ErrorMessage'
 
 const Container = styled.div`
