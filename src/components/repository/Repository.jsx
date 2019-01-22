@@ -13,7 +13,6 @@ const RepositoryContainer = styled.div`
   flex-direction: column;
   margin-top: 48px;
   width: 100%;
-  padding: 0 24px;
 `
 
 const Repository = ({ name, owner }) => (
