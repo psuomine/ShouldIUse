@@ -11,12 +11,12 @@ const Container = styled.div`
   margin-top: 96px;
   align-items: center;
   width: 1400px;
+  padding: 0 24px;
 `
 
 const SearchCardLayout = styled.div`
   max-width: 600px;
   width: 100%;
-  padding: 0 24px;
 `
 
 class Content extends Component {
